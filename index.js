@@ -15,12 +15,17 @@ const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRando
 const { fetchJson, fetchText } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
 const fs = require('fs')
-const moment = require('moment-timezone')
-const { exec } = require('child_process')
+const crypto = require('crypto')
+const util = require('util')
+const { exec, spawn, execSync } = require("child_process")
 const fetch = require('node-fetch')
 const tiktod = require('tiktok-scraper')
 const ffmpeg = require('fluent-ffmpeg')
+const moment = require('moment-timezone')
 const { removeBackgroundFromImageFile } = require('remove.bg')
+const setiker = JSON.parse(fs.readFileSync('./src/stik.json'))
+const audionye = JSON.parse(fs.readFileSync('./src/audio.json'))
+const imagenye = JSON.parse(fs.readFileSync('./src/image.json'))
 const setting = JSON.parse(fs.readFileSync('./src/settings.json'))
 prefix = setting.prefix
 blocked = []
@@ -113,15 +118,59 @@ async function starts() {
 
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
+			const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 			const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 			const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
 			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			let authorname = onlydev.contacts[from] != undefined ? onlydev.contacts[from].vname || onlydev.contacts[from].notify : undefined	
-			if (authorname != undefined) { } else { authorname = groupName }
-			
-			
+			if (authorname != undefined) { } else { authorname = groupName }	
+ 	    
+            function addMetadata(packname, author) {	// by Mhankbarbar
+				if (!packname) packname = 'made by admin'; if (!author) author = 'made by admin';	
+				author = author.replace(/[^a-zA-Z0-9]/g, '');	
+				let name = `${author}_${packname}`
+				if (fs.existsSync(`./stickers/${name}.exif`)) return `./stickers/${name}.exif`
+				const json = {	
+					"sticker-pack-name": packname,
+					"sticker-pack-publisher": author,
+				}
+				const littleEndian = Buffer.from([0x49, 0x49, 0x2A, 0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x41, 0x57, 0x07, 0x00])	
+				const bytes = [0x00, 0x00, 0x16, 0x00, 0x00, 0x00]	
+
+				let len = JSON.stringify(json).length	
+				let last	
+
+				if (len > 256) {	
+					len = len - 256	
+					bytes.unshift(0x01)	
+				} else {	
+					bytes.unshift(0x00)	
+				}	
+
+				if (len < 16) {	
+					last = len.toString(16)	
+					last = "0" + len	
+				} else {	
+					last = len.toString(16)	
+				}	
+
+				const buf2 = Buffer.from(last, "hex")	
+				const buf3 = Buffer.from(bytes)	
+				const buf4 = Buffer.from(JSON.stringify(json))	
+
+				const buffer = Buffer.concat([littleEndian, buf2, buf3, buf4])	
+
+				fs.writeFile(`./stickers/${name}.exif`, buffer, (err) => {	
+					return `./stickers/${name}.exif`	
+				})	
+
+			}
+			if (budy.match('hlo')){
+   var Hmm = fs.readFileSync('./lib/v:.mp3');
+onlydev.sendMessage(from, Hmm, audio, { mimetype: 'audio/mp4', quoted : odc, ptt: true })
+}
 			switch(command) {
 				case 'help':
 				case 'menu':
@@ -134,6 +183,25 @@ runtime = process.uptime()
 ┃ ❏ Prefix: 「 ${prefix} 」
 ┃ ❏ Selfbot By OnlyDev City
 ┃ ❏ Api : https://onlydevcity.herokuapp.com/
+┃
+┣◪ 𝗢𝗧𝗛𝗘𝗥
+┃
+┣ ❏ ${prefix}addsticker
+┣ ❏ ${prefix}addvn
+┣ ❏ ${prefix}addimage
+┣ ❏ ${prefix}addvideo
+┣ ❏ ${prefix}getsticker
+┣ ❏ ${prefix}getvn
+┣ ❏ ${prefix}getimage
+┣ ❏ ${prefix}getvideo
+┣ ❏ ${prefix}nightcore
+┣ ❏ ${prefix}slow
+┣ ❏ ${prefix}tupai
+┣ ❏ ${prefix}blub
+┣ ❏ ${prefix}gemuk
+┣ ❏ ${prefix}ghost
+┣ ❏ ${prefix}bass
+┣ ❏ ${prefix}toptt
 ┃
 ┣◪ 𝗠𝗘𝗡𝗨 𝗠𝗔𝗞𝗘𝗥
 ┃
@@ -218,7 +286,15 @@ runtime = process.uptime()
 ┣ ❏ ${prefix}infoilm2
 ┣ ❏ ${prefix}lk21
 ┣ ❏ ${prefix}caklontong
-┣ ❏ ${prefix}tebakgambar
+┣ ❏ ${prefix}doaharian
+┣ ❏ ${prefix}niatsholat
+┣ ❏ ${prefix}bacaansholat
+┣ ❏ ${prefix}jadwalsholat
+┣ ❏ ${prefix}kisahnabi
+┣ ❏ ${prefix}tahlil
+┣ ❏ ${prefix}ayatkursi
+┣ ❏ ${prefix}hadits
+┣ ❏ ${prefix}quran
 ┃
 ┣ ◪ 𝗠𝗘𝗡𝗨 𝗡𝗘𝗪𝗦
 ┃
@@ -268,100 +344,6 @@ runtime = process.uptime()
 ┃
 ┗━━━━《 OnlyDev City シ︎ 》━━━━`, MessageType.text, {quoted: freply})
 					break
-				case 'stiker': 
-				case 'sticker':
-					if ((isMedia && !odc.message.videoMessage || isQuotedImage) && args.length == 0) {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
-						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
-						ran = getRandom('.webp')
-						await ffmpeg(`./${media}`)
-							.input(media)
-							.on('start', function (cmd) {
-								console.log(`Started : ${cmd}`)
-							})
-							.on('error', function (err) {
-								console.log(`Error : ${err}`)
-								fs.unlinkSync(media)
-								reply(mess.error.stick)
-							})
-							.on('end', function () {
-								console.log('Finish')
-								buff = fs.readFileSync(ran)
-								onlydev.sendMessage(from, buff, sticker, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
-								fs.unlinkSync(media)
-								fs.unlinkSync(ran)
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-							.toFormat('webp')
-							.save(ran)
-					} else if ((isMedia && odc.message.videoMessage.seconds < 11 || isQuotedVideo && odc.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
-						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
-						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
-						ran = getRandom('.webp')
-						reply(mess.wait)
-						await ffmpeg(`./${media}`)
-							.inputFormat(media.split('.')[1])
-							.on('start', function (cmd) {
-								console.log(`Started : ${cmd}`)
-							})
-							.on('error', function (err) {
-								console.log(`Error : ${err}`)
-								fs.unlinkSync(media)
-								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`Yah error dek`)
-							})
-							.on('end', function () {
-								console.log('Finish')
-								buff = fs.readFileSync(ran)
-								onlydev.sendMessage(from, buff, sticker, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
-								fs.unlinkSync(media)
-								fs.unlinkSync(ran)
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-							.toFormat('webp')
-							.save(ran)
-					} else if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
-						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
-						ranw = getRandom('.webp')
-						ranp = getRandom('.png')
-						reply(mess.wait)
-						keyrmbg = 'Your-ApiKey'
-						await removeBackgroundFromImageFile({path: media, apiKey: keyrmbg.result, size: 'auto', type: 'auto', ranp}).then(res => {
-							fs.unlinkSync(media)
-							let buffer = Buffer.from(res.base64img, 'base64')
-							fs.writeFileSync(ranp, buffer, (err) => {
-								if (err) return reply('Yah error dek')
-							})
-							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
-								fs.unlinkSync(ranp)
-								if (err) return reply(mess.error.stick)
-								buff = fs.readFileSync(ranw)
-								onlydev.sendMessage(from, buff, sticker, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
-							})
-						    })					
-					} else {
-						reply(`𝗸𝗶𝗿𝗶𝗺 𝗴𝗮𝗺𝗯𝗮𝗿 𝗱𝗲𝗻𝗴𝗮𝗻 𝗰𝗮𝗽𝘁𝗶𝗼𝗻 ${prefix}𝘀𝘁𝗶𝗰𝗸𝗲𝗿 𝗮𝘁𝗮𝘂 𝗿𝗲𝗽𝗹𝘆/𝘁𝗮𝗴 𝗴𝗮𝗺𝗯𝗮𝗿`)
-					}
-					break
-		case 'notif': // Case By Nayla Chan
-				onlydev.updatePresence(from, Presence.composing)
-				teks = `Notif dari @${sender.split("@")[0]}\n*Pesan : ${body.slice(7)}*`
-				group = await onlydev.groupMetadata(from);
-				member = group['participants']
-				jids = [];
-				member.map(async adm => {
-				jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
-				})
-				options = {
-				text: teks,
-				contextInfo: {
-				mentionedJid: jids
-				},
-				quoted: odc
-				}
-				await onlydev.sendMessage(from, options, text)
-				break
 		case 'tebakgambar':
 					anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kuis/tebakgambar?apikey=onlyonedeveloper`, {method: 'get'})
 					buffer = await getBuffer(anu.result.images)
@@ -403,17 +385,9 @@ runtime = process.uptime()
 				if (args.length < 1) return reply('Urlnya mana tong?')
 				if (!isUrl(args[0]) && !args[0].includes('www.instagram.com')) return reply('ini bukan url instagram anjim')
 				ige = body.slice(8)
-                anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/ig?url=${args[0]}&apikey=onlyonedeveloper`, {method: 'get'})
-				buffer = await getBuffer(anu.hasil.result.data.data)
-                onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
-				break
-		case 'igvideo': // Update By ItsmeikyXSec404 & RzkyO				
-				if (args.length < 1) return reply('Urlnya mana tong?')
-				if (!isUrl(args[0]) && !args[0].includes('www.instagram.com')) return reply('ini bukan url instagram anjim')
-				ige = body.slice(9)
-                anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/ig?url=${args[0]}&apikey=onlyonedeveloper`, {method: 'get'})
-				buffer = await getBuffer(anu.hasil.result.data.data)
-                onlydev.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.hasil.result.data.type}.mp4`, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+                                anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/ig?url=${args[0]}&apikey=onlyonedeveloper`, {method: 'get'})
+				buffer = await getBuffer(anu.result.url)
+                                onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
 				break
 		case 'fakeaddress': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
@@ -1410,17 +1384,17 @@ runtime = process.uptime()
 				onlydev.updatePresence(from, Presence.composing) 
 				runtime = process.uptime()
 				wah = `-{ *𝙍𝙐𝙉𝙏𝙄𝙈𝙀* }-\n\n\`\`\`${kyun(runtime)}\`\`\``
-                onlydev.sendMessage(from, wah, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.com`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "𝙍𝙐𝙉𝙏𝙄𝙈𝙀", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1200, "width": 1100, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
-			   break
-	     case 'return':
-			   return onlydev.sendMessage(from, JSON.stringify(eval(args.join(''))), text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.com`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1200, "width": 1100, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
-		       break
+                                onlydev.sendMessage(from, wah, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.com`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "𝙍𝙐𝙉𝙏𝙄𝙈𝙀", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1200, "width": 1100, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+			        break
+	        case 'return':
+			        return onlydev.sendMessage(from, JSON.stringify(eval(args.join(''))), text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.com`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1200, "width": 1100, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+		                break
 		case 'payment':
 		case 'payments':
 			 var itsme = `0@s.whatsapp.net`
 			 var split = `*PAYMENT-INFO*`
 				var selepbot = {
-					contextInfo: {
+					contextInfo:     {
 				    participant: itsme,
 			        quotedMessage: {
 				    extendedTextMessage: {
@@ -1428,7 +1402,7 @@ runtime = process.uptime()
 					}
 					}
 					}
-				    }
+				        }
 				onlydev.sendMessage(from, `*──「 PAYMENT 」──*\n*Premium : 15k/Bulan*\n*Sewa Bot : 10K*\n- Ovo : 081-2818-72699\n- Pulsa : 0812-8187-2699( +5K )\n\n*──「 OnlyDev City シ︎ 」──* `, MessageType.text, selepbot)
 				break
 			case 'chatlist':
@@ -1436,8 +1410,8 @@ runtime = process.uptime()
 				onlydev.updatePresence(from, Presence.composing)
 				var itsme = `0@s.whatsapp.net`
 				var split = `𝘾𝙀𝙆 𝘼𝙇𝙇-𝘾𝙃𝘼𝙏`
-				var selepbot = {
-					contextInfo: {
+				var selepbot =         {
+					contextInfo:   {
 					participant: itsme,
 					quotedMessage: {
 					extendedTextMessage: {
@@ -1449,7 +1423,435 @@ runtime = process.uptime()
 				teks = `Total : ${totalchat.length}`
 				onlydev.sendMessage(from, teks, MessageType.text, selepbot)
 				break
-                           }
+	       case 'addsticker':          
+				if (!isQuotedSticker) return reply('Reply stiker nya')
+				svst = body.slice(12)
+				if (!svst) return reply('Nama sticker nya apa?')
+				boij = JSON.parse(JSON.stringify(odc).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await onlydev.downloadMediaMessage(boij)
+				setiker.push(`${svst}`)
+				fs.writeFileSync(`./src/sticker/${svst}.webp`, delb)
+				fs.writeFileSync('./src/stik.json', JSON.stringify(setiker))
+				onlydev.sendMessage(from, `Sukses Menambahkan Sticker kedalam database\nSilahkan Cek dengan cara ${prefix}liststicker`, MessageType.text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} }) 
+				break
+			case 'addvn':
+				if (!isQuotedAudio) return reply('Reply vnnya blokk!')
+				svst = body.slice(7)
+				if (!svst) return reply('Nama audionya apa su?')
+				boij = JSON.parse(JSON.stringify(odc).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await onlydev.downloadMediaMessage(boij)
+				audionye.push(`${svst}`)
+				fs.writeFileSync(`./src/audio/${svst}.mp3`, delb)
+				fs.writeFileSync('./src/audio.json', JSON.stringify(audionye))
+				onlydev.sendMessage(from, `Sukses Menambahkan Vn ke dalam database\nSilahkann Cek dengan cara ${prefix}listvn`, MessageType.text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} }) 
+				break
+			case 'getvn':
+			   if (args.length < 1) return reply('Masukan nama yang terdaftar di list vn')
+				namastc = body.slice(7)
+				buffer = fs.readFileSync(`./src/audio/${namastc}.mp3`)
+				onlydev.sendMessage(from, buffer, audio, { mimetype: 'audio/mp4',  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }}, ptt: true })
+				break
+			case 'getsticker':
+			case 'gets':
+			   if (args.length < 1) return reply('Masukan nama yang terdaftar di list sticker')
+				namastc = body.slice(12)
+				result = fs.readFileSync(`./src/sticker/${namastc}.webp`)
+				onlydev.sendMessage(from, result, sticker)
+				break
+           case 'liststicker':
+				teks = '*Sticker List :*\n\n'
+				for (let awokwkwk of setiker) {
+					teks += `- ${awokwkwk}\n`
+				}
+				teks += `\n*Total : ${setiker.length}*`
+				onlydev.sendMessage(from, teks.trim(), extendedText, {  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }}, contextInfo: { "mentionedJid": setiker } })
+				break
+			case 'listvn':
+			case 'vnlist':
+				teks = '*List Vn:*\n\n'
+				for (let awokwkwk of audionye) {
+					teks += `- ${awokwkwk}\n`
+				}
+				teks += `\n*Total : ${audionye.length}*`
+				onlydev.sendMessage(from, teks.trim(), extendedText, {  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }}, contextInfo: { "mentionedJid": audionye } })
+				break
+			case 'addimage':
+				if (!isQuotedImage) return reply('Reply imagenya blokk!')
+				svst = body.slice(10)
+				if (!svst) return reply('Nama imagenya apa su?')
+				boij = JSON.parse(JSON.stringify(odc).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await onlydev.downloadMediaMessage(boij)
+				imagenye.push(`${svst}`)
+				fs.writeFileSync(`./src/image/${svst}.jpeg`, delb)
+				fs.writeFileSync('./src/image.json', JSON.stringify(imagenye))
+				onlydev.sendMessage(from, `Sukses Menambahkan image ke dalam database\nSilahkan cek dengan cara ${prefix}listimage`, MessageType.text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} }) 
+				await limitAdd(sender)
+				break
+			case 'getimage':
+            case 'getimg':
+			   if (args.length < 1) return reply('Masukan nama yang terdaftar di list image')
+				namastc = body.slice(10)
+				buffer = fs.readFileSync(`./src/image/${namastc}.jpeg`)
+				onlydev.sendMessage(from, buffer, image, {  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }}, caption: `Result From Database : ${namastc}.jpeg` })
+				break
+			case 'imagelist':
+			case 'listimage':
+				teks = '*List Image :*\n\n'
+				for (let awokwkwk of imagenye) {
+					teks += `- ${awokwkwk}\n`
+				}
+				teks += `\n*Total : ${imagenye.length}*`
+				onlydev.sendMessage(from, teks.trim(), extendedText, {  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }}, contextInfo: { "mentionedJid": imagenye } })
+				break
+			case 'addvideo':
+				if (!isQuotedVideo) return reply('Reply videonya blokk!')
+				svst = body.slice(10)
+				if (!svst) return reply('Nama videonya apa su?')
+				boij = JSON.parse(JSON.stringify(odc).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await onlydev.downloadMediaMessage(boij)
+				videonye.push(`${svst}`)
+				fs.writeFileSync(`./src/video/${svst}.mp4`, delb)
+				fs.writeFileSync('./src/video.json', JSON.stringify(videonye))
+				onlydev.sendMessage(from, `Sukses Menambahkan Video\nCek dengan cara ${prefix}listvideo`, MessageType.text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} }) 
+				break
+			case 'getvideo':
+			   if (args.length < 1) return reply('Masukan nama yang terdaftar di list video')
+				namastc = body.slice(10)
+				buffer = fs.readFileSync(`./src/video/${namastc}.mp4`)
+				onlydev.sendMessage(from, buffer, video, { mimetype: 'video/mp4', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} }) 
+				break
+			case 'listvideo':
+			case 'videolist':
+				teks = '*List Video :*\n\n'
+				for (let awokwkwk of videonye) {
+					teks += `- ${awokwkwk}\n`
+				}
+				teks += `\n*Total : ${videonye.length}*`
+				onlydev.sendMessage(from, teks.trim(), extendedText, {  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }}, contextInfo: { "mentionedJid": videonye } })
+				break
+            case 'sticker':
+					if ((isMedia && !odc.message.videoMessage || isQuotedImage) && args.length == 0) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
+						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+						ran = getRandom('.webp')
+						await ffmpeg(`./${media}`)
+							.input(media)
+							.on('start', function (cmd) {
+								console.log(`Started : ${cmd}`)
+							})
+							.on('error', function (err) {
+								console.log(`Error : ${err}`)
+								fs.unlinkSync(media)
+							})
+							.on('end', function () {
+								console.log('Finish')
+								exec(`webpmux -set exif ${addMetadata('SelfBot',' OnlyDevCity')} ${ran} -o ${ran}`, async (error) => {
+								if (error) return reply(mess.error.stick)
+								onlydev.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: odc })
+								fs.unlinkSync(media)	
+								fs.unlinkSync(ran)	
+								})
+								/*onlydev.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: odc})
+								fs.unlinkSync(media)
+								fs.unlinkSync(ran)*/
+							})
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+							.toFormat('webp')
+							.save(ran)
+					} else if ((isMedia && odc.message.videoMessage.seconds < 11 || isQuotedVideo && odc.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
+						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+						ran = getRandom('.webp')
+						wew = `❮⏳❯  \`\`\`Please Wait ${pushname2}\`\`\``
+					onlydev.sendMessage(from, wew, text, { quoted: odc })
+							await ffmpeg(`./${media}`)
+							.inputFormat(media.split('.')[1])
+							.on('start', function (cmd) {
+							console.log(`Started : ${cmd}`)
+							})
+							.on('error', function (err) {
+								console.log(`Error : ${err}`)
+								fs.unlinkSync(media)
+								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+								reply(`❌ Gagal, pada saat mengkonversi ${tipe} ke stiker`)
+							})
+							.on('end', function () {
+								console.log('Finish')
+								exec(`webpmux -set exif ${addMetadata('SelfBot',' OnlyDevCity')} ${ran} -o ${ran}`, async (error) => {
+									if (error) return reply(mess.error.stick)
+									onlydev.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: odc })
+									fs.unlinkSync(media)	
+									fs.unlinkSync(ran)
+							})
+								/*onlydev.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: odc})
+								fs.unlinkSync(media)
+								fs.unlinkSync(ran)*/
+							})
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+							.toFormat('webp')
+							.save(ran)
+					} else if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
+						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+						ranw = getRandom('.webp')
+						ranp = getRandom('.png')
+						wew = `❮⏳❯  \`\`\`Please Wait ${pushname2}\`\`\``
+					onlydev.sendMessage(from, wew, text, { quoted: odc })
+						keyrmbg = 'Your-ApiKey'
+						await removeBackgroundFromImageFile({path: media, apiKey: keyrmbg, size: 'auto', type: 'auto', ranp}).then(res => {
+							fs.unlinkSync(media)
+							let buffer = Buffer.from(res.base64img, 'base64')
+							fs.writeFileSync(ranp, buffer, (err) => {
+							if (err) return reply('Gagal, Terjadi kesalahan, silahkan coba beberapa saat lagi.')
+							})
+							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
+								fs.unlinkSync(ranp)
+								exec(`webpmux -set exif ${addMetadata('BOT', authorname)} ${ranw} -o ${ranw}`, async (error) => {
+								onlydev.sendMessage(from, fs.readFileSync(ranw), sticker, { quoted: odc })
+								fs.unlinkSync(ranw)
+								})
+								//onlydev.sendMessage(from, fs.readFileSync(ranw), sticker, {quoted: odc})
+							})
+						})
+					/*} else if ((isMedia || isQuotedImage) && colors.includes(args[0])) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
+						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+						ran = getRandom('.webp')
+						await ffmpeg(`./${media}`)
+							.on('start', function (cmd) {
+								console.log('Started :', cmd)
+							})
+							.on('error', function (err) {
+								fs.unlinkSync(media)
+								console.log('Error :', err)
+							})
+							.on('end', function () {
+								console.log('Finish')
+								fs.unlinkSync(media)
+								onlydev.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: odc})
+								fs.unlinkSync(ran)
+							})
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=${args[0]}@0.0, split [a][b]; [a] palettegen=reserve_transparent=off; [b][p] paletteuse`])
+							.toFormat('webp')
+							.save(ran)*/
+					} else {
+						reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim`)
+					}
+					break      
+            case 'takestick':
+					if ((isMedia && !odc.message.videoMessage || isQuotedSticker) && args.length == 0) {
+						const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
+						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+						ran = getRandom('.webp')
+						await ffmpeg(`./${media}`)
+							.input(media)
+							.on('start', function (cmd) {
+								console.log(`Started : ${cmd}`)
+							})
+							.on('error', function (err) {
+								console.log(`Error : ${err}`)
+								fs.unlinkSync(media)
+							})
+							.on('end', function () {
+								console.log('Finish')
+								exec(`webpmux -set exif ${addMetadata('SelfBot',' OnlyDevCity')} ${ran} -o ${ran}`, async (error) => {
+								if (error) return reply(mess.error.stick)
+								onlydev.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: odc })
+								fs.unlinkSync(media)	
+								fs.unlinkSync(ran)	
+								})
+								/*onlydev.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: odc})
+								fs.unlinkSync(media)
+								fs.unlinkSync(ran)*/
+							})
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+							.toFormat('webp')
+							.save(ran)
+					} else if ((isMedia && odc.message.videoMessage.seconds < 11 || isQuotedVideo && odc.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
+						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+						ran = getRandom('.webp')
+						wew = `❮⏳❯  \`\`\`Please Wait ${pushname2}\`\`\``
+					onlydev.sendMessage(from, wew, text, { quoted: odc })
+							await ffmpeg(`./${media}`)
+							.inputFormat(media.split('.')[1])
+							.on('start', function (cmd) {
+							console.log(`Started : ${cmd}`)
+							})
+							.on('error', function (err) {
+								console.log(`Error : ${err}`)
+								fs.unlinkSync(media)
+								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+								reply(`❌ Gagal, pada saat mengkonversi ${tipe} ke stiker`)
+							})
+							.on('end', function () {
+								console.log('Finish')
+								exec(`webpmux -set exif ${addMetadata('SelfBot',' OnlyDevCity')} ${ran} -o ${ran}`, async (error) => {
+									if (error) return reply(mess.error.stick)
+									onlydev.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: odc })
+									fs.unlinkSync(media)	
+									fs.unlinkSync(ran)
+							})
+								/*onlydev.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: odc})
+								fs.unlinkSync(media)
+								fs.unlinkSync(ran)*/
+							})
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+							.toFormat('webp')
+							.save(ran)
+					} else if ((isMedia || isQuotedSticker) && args[0] == 'nobg') {
+						const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
+						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+						ranw = getRandom('.webp')
+						ranp = getRandom('.png')
+						wew = `❮⏳❯  \`\`\`Please Wait ${pushname2}\`\`\``
+					onlydev.sendMessage(from, wew, text, { quoted: odc })
+						keyrmbg = 'Your-ApiKey'
+						await removeBackgroundFromImageFile({path: media, apiKey: keyrmbg, size: 'auto', type: 'auto', ranp}).then(res => {
+							fs.unlinkSync(media)
+							let buffer = Buffer.from(res.base64img, 'base64')
+							fs.writeFileSync(ranp, buffer, (err) => {
+							if (err) return reply('Gagal, Terjadi kesalahan, silahkan coba beberapa saat lagi.')
+							})
+							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
+								fs.unlinkSync(ranp)
+								exec(`webpmux -set exif ${addMetadata('BOT', authorname)} ${ranw} -o ${ranw}`, async (error) => {
+								onlydev.sendMessage(from, fs.readFileSync(ranw), sticker, { quoted: odc })
+								fs.unlinkSync(ranw)
+								})
+								//onlydev.sendMessage(from, fs.readFileSync(ranw), sticker, {quoted: odc})
+							})
+						})
+					/*} else if ((isMedia || isQuotedSticker) && colors.includes(args[0])) {
+						const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo : odc
+						const media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+						ran = getRandom('.webp')
+						await ffmpeg(`./${media}`)
+							.on('start', function (cmd) {
+								console.log('Started :', cmd)
+							})
+							.on('error', function (err) {
+								fs.unlinkSync(media)
+								console.log('Error :', err)
+							})
+							.on('end', function () {
+								console.log('Finish')
+								fs.unlinkSync(media)
+								onlydev.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: odc})
+								fs.unlinkSync(ran)
+							})
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=${args[0]}@0.0, split [a][b]; [a] palettegen=reserve_transparent=off; [b][p] paletteuse`])
+							.toFormat('webp')
+							.save(ran)*/
+					} else {
+						reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim`)
+					}
+					break
+			    case 'nightcore':
+	                 if (!isQuotedAudio) return reply('Reply audio nya om')
+					encmedia = JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -filter:a atempo=1.06,asetrate=44100*1.25 ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						onlydev.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:false, quoted: odc,duration:99999999999999999999999})
+						fs.unlinkSync(ran)
+					   })
+				       break 
+				case 'slow':
+	                 if (!isQuotedAudio) return reply('Reply audio nya om')
+					encmedia = JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -filter:a "atempo=0.7,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						onlydev.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} })
+						fs.unlinkSync(ran)
+					    })
+				        break
+				case 'tupai':
+	                 if (!isQuotedAudio) return reply('Reply audio nya om')
+					encmedia = JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -filter:a "atempo=0.5,asetrate=65100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						onlydev.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} })
+						fs.unlinkSync(ran)
+					    })
+				       break
+				case 'blub':
+	                 if (!isQuotedAudio) return reply('Reply audio nya om')
+					encmedia = JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -filter:a "atempo=0.9,asetrate=95100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						onlydev.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} })
+						fs.unlinkSync(ran)
+					    })
+				        break
+				case 'gemuk':
+	                 if (!isQuotedAudio) return reply('Reply audio nya om')
+					encmedia = JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						onlydev.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} })
+						fs.unlinkSync(ran)
+					    })
+				        break
+				case 'ghost':
+	                 if (!isQuotedAudio) return reply('Reply audio nya om')
+					encmedia = JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -filter:a "atempo=1.6,asetrate=3486" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						onlydev.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} }} })
+						fs.unlinkSync(ran)
+					    })
+				       break
+		       case 'bass':
+	                 if (!isQuotedAudio) return reply('Reply audio nya om')
+					encmedia = JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} -af equalizer=f=64:width_type=o:width=2:g=56 ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						onlydev.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true,  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } } })
+						fs.unlinkSync(ran)
+					   })
+				       break
+	             case 'toptt':
+	                 if (!isQuotedAudio) return reply('Reply audio nya om')
+					encmedia = JSON.parse(JSON.stringify(odc).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await onlydev.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('Gagal mengkonversi audio ke ptt')
+						topt = fs.readFileSync(ran)
+						onlydev.sendMessage(from, topt, audio, {mimetype: 'audio/mp4',  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, ptt:true})
+						})
+						await limitAdd(sender)
+					    break
+                            }
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
 		}
