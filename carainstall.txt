@@ -10,5 +10,9 @@ $bash install.sh
 $node index.js
 
 Tinggal Scan Dah :)
+Kalo Masih Gabisa Lu Download Node Modules Nya
+https://www.mediafire.com/file/uepiv0uwp1moncj/node_modules.zip/file
+Abis Lu Download Lu Ekstrak Terus Folder Node_Modules Nya Lu Pindahin Ke Folder Bot Lu
+
 
 Powered By : Only Dev City.
