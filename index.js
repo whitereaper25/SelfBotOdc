@@ -1,8 +1,12 @@
 //SC BY MHANKBARBAR
+//WEB API BY ITSMEIKYXSEC404
 //RECODE BY ITSMEIKYXSEC404 & RIZKYO
-//FREE WEB API BY ITSMEIKYXSEC404
-//INFODEVELOPER JANGAN DI HAPUS AJG
-//NUMPANG NAMA DOANG LU AJG
+//CUMAN RECODE BANG
+//APIKEY ? BELI SENDIRI YA :P
+//EDT APIKEY ? DI /src/settings.json
+//EDT OWNER NUMBER ? DI /src/settings.json
+//EDT PREFIX BOT ? DI /src/settings.json
+// BELI DI WEB : https://onlydevcity.herokuapp.com/price
 const {
     WAConnection,
     MessageType,
@@ -30,6 +34,7 @@ const audionye = JSON.parse(fs.readFileSync('./src/audio.json'))
 const imagenye = JSON.parse(fs.readFileSync('./src/image.json'))
 const setting = JSON.parse(fs.readFileSync('./src/settings.json'))
 prefix = setting.prefix
+PremiumKey = setting.PremiumKey
 blocked = []
 
 function kyun(seconds){
@@ -186,6 +191,21 @@ runtime = process.uptime()
 ┃ ❏ Selfbot By OnlyDev City
 ┃ ❏ Api : https://onlydevcity.herokuapp.com/
 ┃
+┣◪ 𝗔𝗦𝗨𝗣𝗔𝗡
+┃
+┣ ❏ ${prefix}asupan
+┣ ❏ ${prefix}asupanrana
+┣ ❏ ${prefix}asupanamel
+┣ ❏ ${prefix}asupankaia
+┣ ❏ ${prefix}asupanuna
+┣ ❏ ${prefix}asupanjungputri
+┣ ❏ ${prefix}asupanghea
+┣ ❏ ${prefix}asupanjane
+┣ ❏ ${prefix}asupansalwa
+┣ ❏ ${prefix}asupanruby
+┣ ❏ ${prefix}storyepep
+┣ ❏ ${prefix}lordfahri
+┃
 ┣◪ 𝗢𝗧𝗛𝗘𝗥
 ┃
 ┣ ❏ ${prefix}addsticker
@@ -204,6 +224,56 @@ runtime = process.uptime()
 ┣ ❏ ${prefix}ghost
 ┣ ❏ ${prefix}bass
 ┣ ❏ ${prefix}toptt
+┃
+┣◪ 𝗦𝗘𝗥𝗧𝗜 𝗠𝗔𝗞𝗘𝗥
+┃
+┣ ❏ ${prefix}anakharam 
+┣ ❏ ${prefix}babu 
+┣ ❏ ${prefix}bucinserti 
+┣ ❏ ${prefix}bocilepep 
+┣ ❏ ${prefix}gayserti 
+┣ ❏ ${prefix}pacar 
+┣ ❏ ${prefix}sadboy 
+┣ ❏ ${prefix}surga 
+┣ ❏ ${prefix}pintar 
+┣ ❏ ${prefix}badboy 
+┣ ❏ ${prefix}badgirl 
+┣ ❏ ${prefix}goodboy 
+┣ ❏ ${prefix}goodgirl 
+┣ ❏ ${prefix}editorberkelas 
+┣ ❏ ${prefix}goodlooking 
+┣ ❏ ${prefix}fucekboy 
+┣ ❏ ${prefix}jamet 
+┣ ❏ ${prefix}heker 
+┣ ❏ ${prefix}fftourserti 
+┣ ❏ ${prefix}fftourserti2 
+┣ ❏ ${prefix}fftourserti3 
+┣ ❏ ${prefix}fftourserti4 
+┣ ❏ ${prefix}fftourserti5 
+┣ ❏ ${prefix}pubgtourserti 
+┣ ❏ ${prefix}pubgtourserti2
+┣ ❏ ${prefix}pubgtourserti3
+┣ ❏ ${prefix}pubgtourserti4
+┣ ❏ ${prefix}pubgtourserti5
+┣ ❏ ${prefix}mltourserti
+┣ ❏ ${prefix}mltourserti2
+┣ ❏ ${prefix}mltourserti3
+┣ ❏ ${prefix}mltourserti4
+┣ ❏ ${prefix}mltourserti5
+┣ ❏ ${prefix}tweetfake
+┃
+┣◪ 𝗜𝗦𝗟𝗔𝗠
+┃
+┣ ❏ ${prefix}doaharian
+┣ ❏ ${prefix}asmaulhusna
+┣ ❏ ${prefix}niatsholat
+┣ ❏ ${prefix}bacaansholat
+┣ ❏ ${prefix}jadwalsholat
+┣ ❏ ${prefix}kisahnabi
+┣ ❏ ${prefix}tahlil
+┣ ❏ ${prefix}ayatkursi
+┣ ❏ ${prefix}hadits 
+┣ ❏ ${prefix}quran
 ┃
 ┣◪ 𝗠𝗘𝗡𝗨 𝗠𝗔𝗞𝗘𝗥
 ┃
@@ -288,15 +358,11 @@ runtime = process.uptime()
 ┣ ❏ ${prefix}infoilm2
 ┣ ❏ ${prefix}lk21
 ┣ ❏ ${prefix}caklontong
-┣ ❏ ${prefix}doaharian
-┣ ❏ ${prefix}niatsholat
-┣ ❏ ${prefix}bacaansholat
-┣ ❏ ${prefix}jadwalsholat
-┣ ❏ ${prefix}kisahnabi
-┣ ❏ ${prefix}tahlil
-┣ ❏ ${prefix}ayatkursi
-┣ ❏ ${prefix}hadits
-┣ ❏ ${prefix}quran
+┣ ❏ ${prefix}quoteen
+┣ ❏ ${prefix}rexdlget
+┣ ❏ ${prefix}rexdlsearch
+┣ ❏ ${prefix}artimimpi
+┣ ❏ ${prefix}fml
 ┃
 ┣ ◪ 𝗠𝗘𝗡𝗨 𝗡𝗘𝗪𝗦
 ┃
@@ -344,10 +410,277 @@ runtime = process.uptime()
 ┣ ❏ ${prefix}cringe
 ┣ ❏ ${prefix}hentaipict
 ┃
+┣ ◪ Thanks To
+┃
+┣ ❏ ItsmeikyXSec404
+┣ ❏ DuingZ
+┣ ❏ RizkyO
+┣ ❏ Arga
+┣ ❏ Bryan Rafly
+┣ ❏ Fadhill
+┣ ❏ Ramlan
+┣ ❏ Bagus
+┣ ❏ Rifai
+┣ ❏ Nayla
+┣ ❏ Akmal
+┣ ❏ RR 018
+┃
 ┗━━━━《 OnlyDev City シ︎ 》━━━━`, MessageType.text, {quoted: freply})
 					break
+		case 'ttp': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(11)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/ttp/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, sticker, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'anakharam': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(11)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/AnakHaramSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'heker': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(6)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/HekerSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'fftourserti': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(12)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/FFSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'fftourserti2': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(13)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/FFSerti2/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'fftourserti3': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(13)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/FFSerti3/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'fftourserti4': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(13)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/FFSerti4/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'fftourserti5': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(13)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/FFSerti5/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'pubgtourserti': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(14)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/PubgTourSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'pubgtourserti2': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(15)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/PubgTourSerti2/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'pubgtourserti3': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(15)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/PubgTourSerti3/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'pubgtourserti4': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(15)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/PubgTourSerti4/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'pubgtourserti5': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(15)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/PubgTourSerti5/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'mltourserti': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(12)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/MLTourSerti1/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'mltourserti2': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(13)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/MLTourSerti2/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'mltourserti3': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(13)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/MLTourSerti3/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'mltourserti4': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(13)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/MLTourSerti4/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'mltourserti5': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(13)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/MLTourSerti5/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'tweetfake': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(10)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`https://onlydevcity.xyz/Tweet/?text=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'babu': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(5)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/BabuSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'bucinserti': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(11)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/BucinSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'bocilepep': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(10)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/CilEpepSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'gayserti': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(9)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/GaySerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'pacar': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(6)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/PacarSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'sadboy': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(7)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/SadBoySerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'surga': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(6)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/SurgaSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'pintar': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(7)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/PintarSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'badboy': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(7)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/BadBoySerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'badgirl': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(8)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/BadGirlSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'goodboy': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(8)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/GoodBoySerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'goodgirl': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(9)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/GoodGirlSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'editorberkelas': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(15)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/EditorBerkelasSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'goodlooking': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(12)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/GoodLookingSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'fucekboy': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(9)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/FucekBoySerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'jamet': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(6)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/JametSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
+		case 'youtuber': // Update By RzkyO & ItsmeikyXSec404				
+				if (args.length < 1) return reply(`textnya mana om?`)	
+				ct = body.slice(9)
+				reply(`[❕] Loading`)
+				buffer = await getBuffer(`http://rzky.net/docs/api/YoutuberSerti/img.php?nama=${ct}`)
+				onlydev.sendMessage(from, buffer, image, {quoted: freply, caption: 'Zzzzz'})
+				break
 		case 'tebakgambar':
-					anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kuis/tebakgambar?apikey=onlyonedeveloper`, {method: 'get'})
+					anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kuis/tebakgambar?apikey=${PremiumKey}`, {method: 'get'})
 					buffer = await getBuffer(anu.result.images)
 					setTimeout( () => {
 					onlydev.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
@@ -366,7 +699,7 @@ runtime = process.uptime()
 					}, 0) // 1000 = 1s,
 					break
         case 'caklontong':
-					anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kuis/caklontong?apikey=onlyonedeveloper`, {method: 'get'})
+					anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kuis/caklontong?apikey=${PremiumKey}`, {method: 'get'})
 					setTimeout( () => {
 					onlydev.sendMessage(from, '*➸ Jawaban :* '+anu.result.jawaban+'\n'+anu.result.deskripsi, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
 					}, 30000) // 1000 = 1s,
@@ -383,17 +716,27 @@ runtime = process.uptime()
 					onlydev.sendMessage(from, anu.result.soal, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
 					}, 0) // 1000 = 1s,
 					break
+		case 'sadboy':
+				    try {
+					res = await fetchJson(`https://rzky.net/CilEpepSerti/img.php?nama=${body.slice(7)}`, {method: 'get'})
+					buffer = await getBuffer(res.result)
+					onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+					} catch (e) {
+					console.log(`Error :`, color(e,'yellow'))
+					reply('[❗] 𝗘𝗥𝗢𝗥 𝗠𝗨𝗡𝗚𝗞𝗜𝗡 𝗔𝗣𝗜 𝗞𝗘𝗬 𝗥𝗨𝗦𝗔?? [❗]')
+					}
+					break
 		case 'igpost': // Update By ItsmeikyXSec404 & RzkyO				
 				if (args.length < 1) return reply('Urlnya mana tong?')
 				if (!isUrl(args[0]) && !args[0].includes('www.instagram.com')) return reply('ini bukan url instagram anjim')
 				ige = body.slice(8)
-                                anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/ig?url=${args[0]}&apikey=onlyonedeveloper`, {method: 'get'})
+                                anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/ig?url=${args[0]}&apikey=${PremiumKey}`, {method: 'get'})
 				buffer = await getBuffer(anu.result.url)
-                                onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+                onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
 				break
 		case 'fakeaddress': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/fakedata?country=en&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/fakedata?country=en&apikey=${PremiumKey}`)
 				teks = `➸ *Nama* : ${anu.result.name}\n*➸ Birthday :* ${anu.result.birthday}\n*➸ Address :* ${anu.result.address}\n*➸ City :* ${anu.result.city}\n*➸ Region :* ${anu.result.region}\n*➸ Country :* ${anu.result.country}\n*➸ Zip Code :* ${anu.result.zip}\n*➸ Phone Number :* ${anu.result.phone_number}\n*➸ Username :* ${anu.result.username}\n*➸ Password :* ${anu.result.password}\n*➸ Email :* ${anu.result.email}`
 				onlydev.sendMessage(from, teks, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
 				break
@@ -403,7 +746,7 @@ runtime = process.uptime()
 				ll1 = ct.split("|")[0];
 				ll2 = ct.split("|")[1];
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/game?text=${ll1}&text2=${ll2}&theme=battlefield&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/game?text=${ll1}&text2=${ll2}&theme=battlefield&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -413,7 +756,7 @@ runtime = process.uptime()
 				ll1 = ct.split("|")[0];
                 ll2 = ct.split("|")[1];
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev13?text=${ll1}&text2=${ll2}&theme=8bit&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev13?text=${ll1}&text2=${ll2}&theme=8bit&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -424,7 +767,7 @@ runtime = process.uptime()
                 ll2 = ct.split("|")[1];
 				ll3 = ct.split("|")[2];
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker?text=${ll1}&text2=${ll2}&text3=${ll3}&theme=google-suggestion&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker?text=${ll1}&text2=${ll2}&text3=${ll3}&theme=google-suggestion&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -434,7 +777,7 @@ runtime = process.uptime()
 				ll1 = ct.split("|")[0];
                 ll2 = ct.split("|")[1];
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker?text=${ll1}&text2=${ll2}&theme=glitch&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker?text=${ll1}&text2=${ll2}&theme=glitch&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -444,7 +787,7 @@ runtime = process.uptime()
 				ll1 = ct.split("|")[0];
                 ll2 = ct.split("|")[1];
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/game?text=${ll1}&text2=${ll2}&theme=pubg&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/game?text=${ll1}&text2=${ll2}&theme=pubg&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -452,7 +795,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(10)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro11?text=${ct}&theme=butterfly&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro11?text=${ct}&theme=butterfly&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -460,7 +803,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(4)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro10?text=${ct}&theme=birthday&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro10?text=${ct}&theme=birthday&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -468,7 +811,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(6)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro10?text=${ct}&theme=shinetext&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro10?text=${ct}&theme=shinetext&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -476,7 +819,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(9)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro9?text=${ct}&theme=thenight&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro9?text=${ct}&theme=thenight&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -484,7 +827,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(8)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro9?text=${ct}&theme=rainbow3d&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro9?text=${ct}&theme=rainbow3d&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -492,7 +835,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(5)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev4?text=${ct}&theme=lovemessage&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev4?text=${ct}&theme=lovemessage&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -500,7 +843,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(10)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev4?text=${ct}&theme=burnpaper&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev4?text=${ct}&theme=burnpaper&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -508,7 +851,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(11)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev3?text=${ct}&theme=textonecup&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev3?text=${ct}&theme=textonecup&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -516,7 +859,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(8)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev3?text=${ct}&theme=textsky&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev3?text=${ct}&theme=textsky&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -524,7 +867,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(7)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev2?text=${ct}&theme=nature&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev2?text=${ct}&theme=nature&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -532,7 +875,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(7)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev2?text=${ct}&theme=rosegold&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev2?text=${ct}&theme=rosegold&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -540,7 +883,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(9)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev1?text=${ct}&theme=nature3d&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev1?text=${ct}&theme=nature3d&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -548,7 +891,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(6)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev1?text=${ct}&theme=underwater-ocean&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev1?text=${ct}&theme=underwater-ocean&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -556,7 +899,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(10)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev?text=${ct}&theme=woodheart&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev?text=${ct}&theme=woodheart&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -564,56 +907,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(11)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev?text=${ct}&theme=summertext&apikey=onlyonedeveloper`)
-				buffer = await getBuffer(anu.result.url)
-				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
-				break
-
-		case 'watermelon': // Update By RzkyO & ItsmeikyXSec404				
-				if (args.length < 1) return reply(`textnya mana om?`)
-				ct = body.slice(11)
-				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc1?text=${ct}&theme=watermelon&apikey=${BeliBiarWork}`)
-				buffer = await getBuffer(anu.result.url)
-				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
-				break
-		case 'grafity': // Update By RzkyO & ItsmeikyXSec404				
-				if (args.length < 1) return reply(`textnya mana om?`)
-				ct = body.slice(8)
-				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc2?text=${ct}&theme=grafity&apikey=${BeliBiarWork}`)
-				buffer = await getBuffer(anu.result.url)
-				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
-				break
-		case 'whitecube': // Update By RzkyO & ItsmeikyXSec404				
-				if (args.length < 1) return reply(`textnya mana om?`)
-				ct = body.slice(10)
-				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc1?text=${ct}&theme=whitecube&apikey=${BeliBiarWork}`)
-				buffer = await getBuffer(anu.result.url)
-				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
-				break
-		case 'glowingtext': // Update By RzkyO & ItsmeikyXSec404				
-				if (args.length < 1) return reply(`textnya mana om?`)
-				ct = body.slice(12)
-				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc2?text=${ct}&theme=glowingtext&apikey=${BeliBiarWork}`)
-				buffer = await getBuffer(anu.result.url)
-				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
-				break
-		case 'blackstyle': // Update By RzkyO & ItsmeikyXSec404				
-				if (args.length < 1) return reply(`textnya mana om?`)
-				ct = body.slice(11)
-				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc3?text=${ct}&theme=blackstyle&apikey=${BeliBiarWork}`)
-				buffer = await getBuffer(anu.result.url)
-				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
-				break
-		case 'chromed': // Update By RzkyO & ItsmeikyXSec404				
-				if (args.length < 1) return reply(`textnya mana om?`)
-				ct = body.slice(8)
-				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc3?text=${ct}&theme=crisp-chromed&apikey=${BeliBiarWork}`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev?text=${ct}&theme=summertext&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -621,7 +915,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(11)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev5?text=${ct}&theme=underglass&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev5?text=${ct}&theme=underglass&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -629,7 +923,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(9)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev5?text=${ct}&theme=cemetery&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev5?text=${ct}&theme=cemetery&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -637,7 +931,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(10)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev6?text=${ct}&theme=royallock&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/onedev6?text=${ct}&theme=royallock&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -645,7 +939,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(9)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/senja?text=${ct}&theme=coffee-cup&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/senja?text=${ct}&theme=coffee-cup&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -653,7 +947,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)	
 				ct = body.slice(10)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/senja?text=${ct}&theme=coffee-cup2&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/senja?text=${ct}&theme=coffee-cup2&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -661,7 +955,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(5)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/metallic?text=${ct}&theme=neon&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/metallic?text=${ct}&theme=neon&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -669,7 +963,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(5)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/senja?text=${ct}&theme=glow&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/senja?text=${ct}&theme=glow&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -677,7 +971,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(7)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/alam?text=${ct}&theme=summer&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/alam?text=${ct}&theme=summer&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -685,7 +979,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(6)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/alam?text=${ct}&theme=flower&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/alam?text=${ct}&theme=flower&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -693,7 +987,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(10)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro6?text=${ct}&theme=grandient&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro6?text=${ct}&theme=grandient&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -701,7 +995,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(11)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro7?text=${ct}&theme=embroidery&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro7?text=${ct}&theme=embroidery&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -709,7 +1003,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(9)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro4?text=${ct}&theme=funnycup&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro4?text=${ct}&theme=funnycup&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -717,7 +1011,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(11)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro5?text=${ct}&theme=orchids-flower&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro5?text=${ct}&theme=orchids-flower&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -725,7 +1019,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(7)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro5?text=${ct}&theme=smoke2&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro5?text=${ct}&theme=smoke2&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -733,7 +1027,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(8)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro3?text=${ct}&theme=loveone&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro3?text=${ct}&theme=loveone&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -741,7 +1035,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(11)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc1?text=${ct}&theme=watermelon&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc1?text=${ct}&theme=watermelon&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -749,7 +1043,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(8)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc2?text=${ct}&theme=grafity&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc2?text=${ct}&theme=grafity&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -757,7 +1051,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(10)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc1?text=${ct}&theme=whitecube&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc1?text=${ct}&theme=whitecube&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -765,7 +1059,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(12)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc2?text=${ct}&theme=glowingtext&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc2?text=${ct}&theme=glowingtext&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -773,7 +1067,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(11)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc3?text=${ct}&theme=blackstyle&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc3?text=${ct}&theme=blackstyle&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -781,7 +1075,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(12)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc3?text=${ct}&theme=crisp-chromed&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/odc3?text=${ct}&theme=crisp-chromed&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -789,7 +1083,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(6)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro3?text=${ct}&theme=smoke&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro3?text=${ct}&theme=smoke&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -797,7 +1091,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(8)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro3?text=${ct}&theme=onesilk&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro3?text=${ct}&theme=onesilk&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -805,7 +1099,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(8)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro1?text=${ct}&theme=glowing&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro1?text=${ct}&theme=glowing&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -813,7 +1107,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(6)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro?text=${ct}&theme=heart&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro?text=${ct}&theme=heart&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -821,7 +1115,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(5)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro?text=${ct}&theme=wolf-metal&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textmaker/pro?text=${ct}&theme=wolf-metal&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -829,7 +1123,7 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(6)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro7?text=${ct}&theme=candy&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/textpro/pro7?text=${ct}&theme=candy&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -837,164 +1131,164 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`textnya mana om?`)
 				ct = body.slice(6)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nulis?text=${ct}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nulis?text=${ct}&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'yuri': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/yuri?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/yuri?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'pussy': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/pussy?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/pussy?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'nekonime': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/nekonime?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/nekonime?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'baka': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/baka?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/baka?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'blowjob': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/blowjob?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/blowjob?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'lewd': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/lewd?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/lewd?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'hentai': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/hentaigif?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/hentaigif?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'waifu': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/waifu?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/waifu?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'eroyuri': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/eroyuri?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/eroyuri?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'hug': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/hug?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/nsfw/hug?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'hug2': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/hug?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/hug?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'awoo': // masih ngebug
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/awoo?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/awoo?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'lick': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/lick?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/lick?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'kiss': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/kiss?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/kiss?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'smug': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/smug?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/smug?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'cuddle': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/cuddle?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/cuddle?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'bully': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/bully?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/bully?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'shinobu': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/shinobu?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/shinobu?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'megumin': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/megumin?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/sfw/megumin?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'blush': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/blush?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/blush?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'highfive': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/highfive?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/highfive?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'handhold': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/handhold?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/handhold?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'smile': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/smile?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/smile?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'glomp': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/glomp?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/glomp?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'cringe': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/cringe?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/cringe?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'shortlink':
 				 // Update By RzkyO & ItsmeikyXSec404
 				onlydev.updatePresence(from, Presence.composing) 
-				data = await fetchJson(`https://onlydevcity.herokuapp.com/api/short/vgd?url=${args[0]}&apikey=onlyonedeveloper`)
+				data = await fetchJson(`https://onlydevcity.herokuapp.com/api/short/vgd?url=${args[0]}&apikey=${PremiumKey}`)
 				hasil = `link : ${args[0]}\n\nOutput : ${data.result.link}`
 				reply(hasil)
 				break
@@ -1002,7 +1296,7 @@ runtime = process.uptime()
 				 // Update By RzkyO & ItsmeikyXSec404
 				onlydev.updatePresence(from, Presence.composing)
 				reply(`[❕] Loading`)
-				data = await fetchJson(`https://onlydevcity.herokuapp.com/api/short/isgd?url=${args[0]}&apikey=onlyonedeveloper`)
+				data = await fetchJson(`https://onlydevcity.herokuapp.com/api/short/isgd?url=${args[0]}&apikey=${PremiumKey}`)
 				hasil = `link : ${args[0]}\n\nOutput : ${data.result.link}`
 				reply(hasil)
 				break
@@ -1010,14 +1304,14 @@ runtime = process.uptime()
 				 // Update By RzkyO & ItsmeikyXSec404
 				onlydev.updatePresence(from, Presence.composing)
 				reply(`[❕] Loading`)
-				data = await fetchJson(`https://onlydevcity.herokuapp.com/api/short/tiny?url=${args[0]}&apikey=onlyonedeveloper`)
+				data = await fetchJson(`https://onlydevcity.herokuapp.com/api/short/tiny?url=${args[0]}&apikey=${PremiumKey}`)
 				hasil = `link : ${args[0]}\n\nOutput : ${data.result.link}`
 				reply(hasil)
 				break
 		case 'asmaulhusna': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/asmaulhusna?apikey=onlyonedeveloper`, {method: 'get'})
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/asmaulhusna?apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Nomor:* : ${i.index}\n*Latin* : ${i.latin}\n*Arab* : ${i.arabic}\n*Translate Indo* : ${i.translation_id}\n*Translate English* : ${i.translation_en}\n=================\n`
@@ -1027,7 +1321,7 @@ runtime = process.uptime()
 		case 'covidindo': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/covidindo?apikey=onlyonedeveloper`, {method: 'get'})
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/covidindo?apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of asu.result) {
 					teks += `*Kode Provinsi:* : ${i.attributes.Kode_Provi}\n*Provinsi* : ${i.attributes.Provinsi}\n*Total Positif* : ${i.attributes.Kasus_Posi}\n*Total Sembuh* : ${i.attributes.Kasus_Semb}\n*Total Meninggal* : ${i.attributes.Kasus_Meni}\n=================\n`
@@ -1037,7 +1331,7 @@ runtime = process.uptime()
 		case 'topanime': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/topanime?apikey=onlyonedeveloper`, {method: 'get'})
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/topanime?apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Title:* : ${i.title}\n*Studio* : ${i.studio}\n*Rank* : ${i.rank}\n*Peak* : ${i.stats.peak}\n*Previously* : ${i.stats.previously}\n*Week On Top* : ${i.stats.weeksOnTop}\n*Status* : ${i.stats.status}\n*Stat* : ${i.stats.stat}\n=================\n`
@@ -1047,7 +1341,7 @@ runtime = process.uptime()
 		case 'samehadeku': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/samehadeku?apikey=onlyonedeveloper`, {method: 'get'})
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/samehadeku?apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of asu.result.season) {
 					teks += `*Title:* : ${i.title}\n*Status* : ${i.status}\n*Link* : ${i.link}\n*Rating* : ${i.rating}\n*Sinopsis* : ${i.sinopsis}\n*Genre* : ${i.genre}\n=================\n`
@@ -1057,7 +1351,7 @@ runtime = process.uptime()
 		case 'coupleship': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/coupleship?apikey=onlyonedeveloper`, {method: 'get'})
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/coupleship?apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Name:* : ${i.names}\n*Anime* : ${i.anime}\n*Rank* : ${i.rank}\n*Peak* : ${i.stats.peak}\n*Previously* : ${i.stats.previously}\n*Week On Top* : ${i.stats.weeksOnTop}\n*Status* : ${i.stats.status}\n*Stat* : ${i.stats.stat}\n=================\n`
@@ -1067,7 +1361,7 @@ runtime = process.uptime()
 		case 'doaharian': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/doaharian?apikey=onlyonedeveloper`, {method: 'get'})
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/doaharian?apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Nama Doa:* : ${i.title}\n*Arab* : ${i.arabic}\n*Latin* : ${i.latin}\n*Translation* : ${i.translation}\n=================\n`
@@ -1076,7 +1370,7 @@ runtime = process.uptime()
 				break
 		case 'niatsholat': // Case By Arga
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/niatshalat?apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/niatshalat?apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of anu.result) {
 				teks += `Sholat : ${i.name}\n*Arab* : ${i.arabic}\n*Latin* : ${i.latin}\n*Terjemah* : ${i.terjemahan}\n=================\n`
@@ -1085,7 +1379,7 @@ runtime = process.uptime()
 				break
 		case 'bacaansholat': // Case By Arga
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/bacaanshalat?apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/bacaanshalat?apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of anu.result) {
 				teks += `Bacaan : ${i.name}\n*Arab* : ${i.arabic}\n*Latin* : ${i.latin}\n*Terjemah* : ${i.terjemahan}\n=================\n`
@@ -1095,7 +1389,7 @@ runtime = process.uptime()
 		case 'jadwalsholat': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`kotanya mana bang?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/jadwalshalat?kota=${body.slice(14)}&apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/jadwalshalat?kota=${body.slice(14)}&apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of anu.result) {
 				teks += `Tanggal : ${i.tanggal}\n*Imsyak* : ${i.imsyak}\n*Shubuh* : ${i.shubuh}\n*Terbit* : ${i.terbit}\n*Dhuha* : ${i.dhuha}\n*Dzuhur* : ${i.dzuhur}\n*Ashar* : ${i.ashr}\n*Magrib* : ${i.magrib}\n*Isya* : ${i.isya}\n=================\n`
@@ -1104,14 +1398,14 @@ runtime = process.uptime()
 				break
 		case 'kisahnabi': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kisahnabi?nabi=${body.slice(11)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kisahnabi?nabi=${body.slice(11)}&apikey=${PremiumKey}`)
 				buffer7 = await getBuffer(anu.result.nabi.image)
 				teks = `*HASIL*\n\n*➸ Nama Nabi :* ${anu.result.nabi.nabi}\n*➸ Lahir :* ${anu.result.nabi.lahir}\n*➸ Umur :* ${anu.result.nabi.umur}\n*➸ Tempat :* ${anu.result.nabi.tempat}\n*➸ Kisah :* ${anu.result.nabi.kisah}`
 				onlydev.sendMessage(from, buffer7, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: teks})
 				break
 		case 'tahlil': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/tahlil?apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/tahlil?apikey=${PremiumKey}`, {method: 'get'})
 				teks = '=================\n'
 				for (let i of anu.result.data) {
 				teks += `Title : ${i.title}\n*Arab* : ${i.arabic}\n*Terjemah* : ${i.translation}\n=================\n`
@@ -1120,13 +1414,13 @@ runtime = process.uptime()
 				break
 		case 'ayatkursi': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/ayatkursi?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/muslim/ayatkursi?apikey=${PremiumKey}`)
 				teks = `➸ *Arab* : ${anu.result.data.arabic}\n*➸ Latin :* ${anu.result.data.latin}\n*➸ Arti :* ${anu.result.data.translation}\n*➸ Tafsir :* ${anu.result.data.tafsir}`
 				onlydev.sendMessage(from, teks, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'covidglobal': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/covidworld?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/covidworld?apikey=${PremiumKey}`)
 				teks = `➸ *Total Cases* : ${anu.result.totalCases}\n*➸ Recovered :* ${anu.result.recovered}\n*➸ Deaths :* ${anu.result.deaths}\n*➸ Active Cases :* ${anu.result.activeCases}\n*➸ Closed Cases :* ${anu.result.closedCases}\n*➸ Last Update :* ${anu.result.lastUpdate}`
 				onlydev.sendMessage(from, teks, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -1136,7 +1430,7 @@ runtime = process.uptime()
 				ll1 = ct.split("|")[0];
                 ll2 = ct.split("|")[1];
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/hadits?kitab=${ll1}&nomor=${ll2}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/hadits?kitab=${ll1}&nomor=${ll2}&apikey=${PremiumKey}`)
 				teks = `➸ *Name Hadits* : ${anu.result.data.name}\n*➸ Number Hadits :* ${anu.result.data.contents.number}\n*➸ Arab :* ${anu.result.data.contents.arab}\n*➸ Latin :* ${anu.result.data.contents.id}`
 				onlydev.sendMessage(from, teks, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -1146,13 +1440,13 @@ runtime = process.uptime()
 				ll1 = ct.split("|")[0];
                 ll2 = ct.split("|")[1];
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/quran?surah=${ll1}&ayat=${ll2}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/quran?surah=${ll1}&ayat=${ll2}&apikey=${PremiumKey}`)
 				teks = `➸ *Juz Ke* : ${anu.result.data.meta.juz}\n*➸ Text Arab :* ${anu.result.data.text.arab}\n*➸ Latin ID :* ${anu.result.data.text.transliteration.en}\n*➸ Arti ID :* ${anu.result.data.translation.id}\n*➸ Tafsir Pendek :* ${anu.result.data.tafsir.id.short}\n*➸ Tafsir Panjang :* ${anu.result.data.tafsir.id.long}\n*➸ Ayat Ke :* ${anu.result.data.surah.number}\n*➸ Nama Surah Arab Pendek :* ${anu.result.data.surah.name.short}\n*➸ Nama Surah Arab Panjang :* ${anu.result.data.surah.name.long}\n*➸ Nama Surah ID :* ${anu.result.data.surah.name.transliteration.id}\n*➸ Arti Nama Surah ID :* ${anu.result.data.surah.name.translation.id}\n*➸ Revelation Arab :* ${anu.result.data.surah.revelation.arab}\n*➸ Revelation ID :* ${anu.result.data.surah.revelation.id}\n*➸ Tafsir ID :* ${anu.result.data.surah.tafsir.id}`
 				onlydev.sendMessage(from, teks, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'github': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/github?user=${body.slice(8)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/github?user=${body.slice(8)}&apikey=${PremiumKey}`)
 				buffer7 = await getBuffer(anu.result.avatar_url)
 				teks = `*HASIL*\n\n*➸ ID :* ${anu.result.id}\n*➸ Node ID :* ${anu.result.node_id}\n*➸ Gravatar ID :* ${anu.result.gravatar_id}\n*➸ Url :* ${anu.result.html_url}\n*➸ Type :* ${anu.result.type}\n*➸ Site Admin :* ${anu.result.site_admin}\n*➸ Name :* ${anu.result.name}\n*➸ Company :* ${anu.result.company}\n*➸ Blog :* ${anu.result.blog}\n*➸ Location :* ${anu.result.location}\n*➸ Email :* ${anu.result.email}\n*➸ Bio  :* ${anu.result.bio}\n*➸ Twitter Username :* ${anu.result.twitter_username}\n*➸ Public Repo :* ${anu.result.public_repos}\n*➸ Public Gists :* ${anu.result.public_gists}\n*➸ Followers :* ${anu.result.followers}\n*➸ Following :* ${anu.result.following}\n*➸ Create At :* ${anu.result.created_at}\n*➸ Update At :* ${anu.result.updated_at}`
 				onlydev.sendMessage(from, buffer7, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: teks})
@@ -1160,14 +1454,14 @@ runtime = process.uptime()
 		case 'cuaca': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`kotanya mana om?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/cuaca?kota=${body.slice(6)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/cuaca?kota=${body.slice(6)}&apikey=${PremiumKey}`)
 				teks = `➸ *Nama Kota* : ${anu.result.data.Nama}\n*➸ Longitude :* ${anu.result.data.Longitude}\n*➸ Latitude :* ${anu.result.data.Latitude}\n*➸ Suhu :* ${anu.result.data.Suhu}\n*➸ Angin :* ${anu.result.data.Angin}\n*➸ Kelembaban :* ${anu.result.data.Kelembaban}\n*➸ Cuaca :* ${anu.result.data.Cuaca}\n*➸ Keterangan :* ${anu.result.data.Keterangan}\n*➸ Udara :* ${anu.result.data.Udara}`
 				onlydev.sendMessage(from, teks, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'tiktokstalk': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`username tiktok mana om?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/tiktod/stalk/?username=${body.slice(13)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/tiktod/stalk/?username=${body.slice(13)}&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.user.avatarThumb)
 				teks = `➸ *Username* : ${anu.result.user.uniqueId}\n*➸ Nickname :* ${anu.result.user.nickname}\n*➸ Bio :* ${anu.result.user.signature}\n*➸ Verified? :* ${anu.result.user.verified}\n*➸ Jumlah Follower :* ${anu.result.stats.followerCount}\n*➸ Jumlah Following :* ${anu.result.stats.followingCount}\n*➸ Jumlah Like :* ${anu.result.stats.heart}\n*➸ Total Video :* ${anu.result.stats.videoCount}`
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: teks})
@@ -1175,7 +1469,7 @@ runtime = process.uptime()
 		case 'igstalk': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`username ig mana om?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/igstalk?u=${body.slice(9)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/igstalk?u=${body.slice(9)}&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.data.profilehd)
 				teks = `➸ *Fullname* : ${anu.result.data.fullname}\n*➸ Private :* ${anu.result.data.private}\n*➸ Verified? :* ${anu.result.data.verified}\n*➸ Bio :* ${anu.result.data.bio}\n*➸ Jumlah Follower :* ${anu.result.data.follower}\n*➸ Jumlah Following :* ${anu.result.data.following}\n*➸ Terhubung Ke FB? :* ${anu.result.data.conneted_fb}\n*➸ Video Post :* ${anu.result.data.videotimeline}\n*➸ Foto Post :* ${anu.result.data.timeline}`
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: teks})
@@ -1183,14 +1477,14 @@ runtime = process.uptime()
 		case 'lacakip': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`ip nya mana bwang?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/iplookup?ip=${body.slice(9)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/iplookup?ip=${body.slice(9)}&apikey=${PremiumKey}`)
 				teks = `➸ *ip* : ${anu.result.ip}\n*➸ Country :* ${anu.result.country}\n*➸ Region :* ${anu.result.region}\n*➸ Latitude :* ${anu.result.latitude}\n*➸ Longtitude :* ${anu.result.longtitude}\n*➸ Timezone :* ${anu.result.timezone}\n*➸ Org :* ${anu.result.org}\n*➸ As :* ${anu.result.as}\n*➸ City :* ${anu.result.city}\n*➸ Country Code :* ${anu.result.countryCode}\n*➸ Zip Code :* ${anu.result.zip}\n*➸ Link GMaps :* ${anu.result.maps}`
 				onlydev.sendMessage(from, teks, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
 				break
 		case 'dkasia': // Update By RzkyO 7 ItsmeikyXSec404
 				if (args.length < 1) return reply(`nama drakorasia apaan bwang?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/drakorasia?search=${body.slice(8)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/drakorasia?search=${body.slice(8)}&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.thumb)
 				hasil = `➸ *Title* : ${anu.result.title}\n*➸ Title Korea :* ${anu.result.titleKr}\n*➸ Year :* ${anu.result.year}\n*➸ Jumlah Episode :* ${anu.result.episode}\n*➸ Genre :* ${anu.result.genre}\n*➸ Durasi :* ${anu.result.duration}\n*➸ Network :* ${anu.result.network}\n*➸ Ringkasan :* ${anu.result.synopsis}\n*➸ Aktor :* ${anu.result.casters}`
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: hasil})
@@ -1198,7 +1492,7 @@ runtime = process.uptime()
 		case 'manga': // Update By RzkyO 7 ItsmeikyXSec404
 				if (args.length < 1) return reply(`nama anime nya apaan bwang?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/manga?search=${body.slice(6)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/manga?search=${body.slice(6)}&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.thumb)
 				hasil = `*Note:* : ${anu.result.note}\n*Title* : ${anu.result.title}\n*Description* : ${anu.result.description}\n*Name* : ${anu.result.name}\n*Type* : ${anu.result.type}\n*Author* : ${anu.result.author}\n*Genre* : ${anu.result.genre}\n*Rating* : ${anu.result.rating}\n*Released* : ${anu.result.released}\n*Status* : ${anu.result.status}`
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: hasil})
@@ -1211,7 +1505,7 @@ runtime = process.uptime()
 		case 'kusonime': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`nama anime nya apaang bwang?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/kusonime?search=${body.slice(9)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/anime/kusonime?search=${body.slice(9)}&apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.thumbs)
 				hasil = `*Title:* : ${anu.result.title}\n*Title Jp* : ${anu.result.title_jp}\n*Genre* : ${anu.result.genre}\n*Season* : ${anu.result.season}\n*Producer* : ${anu.result.producer}\n*Type* : ${anu.result.type}\n*Total Episode* : ${anu.result.total_episode}\n*Rating* : ${anu.result.score}\n*Durasi* : ${anu.result.duration}\n*Released On* : ${anu.result.released_on}\n*Description* : ${anu.result.description}`
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: hasil})
@@ -1219,7 +1513,7 @@ runtime = process.uptime()
 		case 'cekresijne': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`res nya apaan bwang?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/searchresi?courier=jne&awb=${body.slice(11)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/searchresi?courier=jne&awb=${body.slice(11)}&apikey=${PremiumKey}`)
 				hasil = `*Code Resi:* : ${anu.result.data.summary.awb}\n*Courier* : ${anu.result.data.summary.courier}\n*Service* : ${anu.result.data.summary.service}\n*Status* : ${anu.result.data.summary.status}\n*Date* : ${anu.result.data.summary.date}\n*Desc* : ${anu.result.data.summary.desc}\n*Harga* : ${anu.result.data.summary.amount}\n*Berat Barang* : ${anu.result.data.summary.weight}\n*Origin* : ${anu.result.data.detail.origin}\n*Destination* : ${anu.result.data.detail.destination}\n*Shipper* : ${anu.result.data.detail.shipper}\n*Receiver* : ${anu.result.data.detail.receiver}`
 				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'ini hasilnya kak'})
 				teks = '=================\n'
@@ -1228,10 +1522,88 @@ runtime = process.uptime()
 				}
 				reply(teks)
 				break
+		case 'randomanime': // masih ngebug
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/random/randomanime?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.random.link)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupan': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupan?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupanamel': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupanamel?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupanrana': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupanrana?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupankaia': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupankaia?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupanuna': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupanuna?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupanjungputri': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupanjungputri?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupanghea': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupanghea?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupanjane': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupanjane?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupansalwa': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupansalwa?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'asupanruby': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/asupanruby?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'storyepep': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/storyepep?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
+		case 'lordfahri': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/lordfahri?apikey=${PremiumKey}`, {method: 'get'})
+				buff = await getBuffer(anu.result.url)
+				onlydev.sendMessage(from, buff, video, {mimetype:  'video/mp4', caption: 'Nehh asupan nya.', quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }})
+				break
 		case 'playmp3': // masih ngebug api nya
 				if (args.length < 1) return reply('Urlnya mana gan?')
 				reply(`[❕] Loading`)
-                anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/ytmp3?url=${body.slice(8)}&apikey=onlyonedeveloper`, {method: 'get'})
+                anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/ytmp3?url=${body.slice(8)}&apikey=${PremiumKey}`, {method: 'get'})
                if (anu.error) return reply(anu.error)
                  sck = `「 *YOUTUBE MP3 DOWNLOADER* 」\n\n*• Title:* ${anu.result.title}\n*• Filesize:* ${anu.result.filesize}\n*• Size:* ${anu.result.size}\n*• Video ID:* ${anu.result.videoId}\n*• Viewers:* ${anu.result.viewcount}\n*•Rating:* ${anu.result.rating}\n\n*TUNGGU SEBENTAR SHIZUKA LAGI KIRIM AUDIO NYA MOHON JANGAN SPAM*`
                 bufferddd = await getBuffer(anu.result.thumb)
@@ -1242,50 +1614,68 @@ runtime = process.uptime()
 				break
 		case 'meme': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/random/meme?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/random/meme?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				hasil = `➸ *Title* : ${anu.result.title}\n*➸ Author :* ${anu.result.author}\n*➸ Subreddit :* ${anu.result.subreddit}\n*➸ Post Link :* ${anu.result.post_link}`
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: hasil})
 				break
 		case 'randomwp': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/random/wallpaper?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/random/wallpaper?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.url)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'ini fotonya kak'})
 				break
 		case 'blackpink': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/randomimage/blackpink?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/randomimage/blackpink?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.result)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'ini fotonya kak'})
 				break
 		case 'hentaipict': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/hentai?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/hentai?apikey=${PremiumKey}`)
 				buffer = await getBuffer(anu.result.result)
 				onlydev.sendMessage(from, buffer, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'ini fotonya kak'})
 				break
 		case 'quotes': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/quotes/kanye?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/quotes/kanye?apikey=${PremiumKey}`)
 				hasil = `➸ *Author* : ${anu.result.author}\n*➸ Text EN :* ${anu.result.text_en}\n*➸ Text ID :* ${anu.result.text_id}`
+				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
+				break
+		case 'artimimpi': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/quotes/kanye?apikey=${PremiumKey}`)
+				hasil = `➸ *Hasil mimpi yang anda search adalah* : ${anu.hasil.resuly}`
+				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
+				break
+		case 'fml': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/fml?&apikey=${PremiumKey}`)
+				hasil = `➸ *Quote* : ${anu.result.quote}\n*➸ Author:* ${anu.result.author}`
 				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'gabut': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/gabut?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/gabut?apikey=${PremiumKey}`)
 				hasil = `➸ *Activity* : ${anu.result.activity}\n*➸ Type :* ${anu.result.type}`
 				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'quotemuslim': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/randomquote/muslim?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/randomquote/muslim?apikey=${PremiumKey}`)
 				hasil = `*➸ Quote :* ${anu.result.text_id}`
+				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
+				break
+		case 'quoteen': // Update By RzkyO & ItsmeikyXSec404
+				reply(`[❕] Loading`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/random/quoteen?apikey=${PremiumKey}`)
+				hasil = `*➸ Quote :* ${anu.hasil.author}\n*➸ Quote :* ${anu.hasil.quote}`
 				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'infogempa': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/infogempa?apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/infogempa?apikey=${PremiumKey}`)
 				hasil = `➸ *Waktu* : ${anu.result.Waktu}\n*➸ Lintang :* ${anu.result.Lintang}\n*➸ Bujur :* ${anu.result.Bujur}\n*➸ Magnitudo :* ${anu.result.Magnitudo}\n*➸ Kedalaman :* ${anu.result.Kedalaman}\n*➸ Wilayah :* ${anu.result.Wilayah}`
 				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
@@ -1293,53 +1683,53 @@ runtime = process.uptime()
 				if (args.length < 1) return reply(`apa yang mau di translate in dari b.indo ke b.inggris?`)
 				reply(`[❕] Loading`)
 				ct = body.slice(10)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/translate?text=${ct}&to=en&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/translate?text=${ct}&to=en&apikey=${PremiumKey}`)
 				hasil = `➸ *Bahasa IND* : ${anu.hasil.data.origin}\n*➸ Bahasa ENG :* ${anu.hasil.data.result}`
 				onlydev.sendMessage(from, hasil, text, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('image/odc.jpeg')} } }, caption: 'Nih hasilnya kak...'})
 				break
 		case 'faktaunik': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/faktaunik?apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/faktaunik?apikey=${PremiumKey}`, {method: 'get'})
 				reply(anu.result.result)
 				break
 		case 'hilih': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`textnya mana om?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/hilih?kata=${body.slice(6)}&apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/hilih?kata=${body.slice(6)}&apikey=${PremiumKey}`, {method: 'get'})
 				reply(anu.result.result)
 				break
 		case 'gombal': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/random/katakatagombal?apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/random/katakatagombal?apikey=${PremiumKey}`, {method: 'get'})
 				reply(anu.result.quote)
 				break
 		case 'artinama': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/artinama?q=${body.slice(9)}&apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/artinama?q=${body.slice(9)}&apikey=${PremiumKey}`, {method: 'get'})
 				reply(anu.result.result)
 				break
 		case 'lirik': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`nama lagunya mana om?`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/liriklagu?lagu=${body.slice(6)}&apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/liriklagu?lagu=${body.slice(6)}&apikey=${PremiumKey}`, {method: 'get'})
 				reply(anu.result.results)
 				break
 		case 'chord': // Update By RzkyO & ItsmeikyXSec404
 				if (args.length < 1) return reply(`masukin nama lagunya om`)
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/chordlagu?lagu=${body.slice(7)}&apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/chordlagu?lagu=${body.slice(7)}&apikey=${PremiumKey}`, {method: 'get'})
 				reply(anu.result.result)
 				break
 		case 'simisimi': // Update By RzkyO & ItsmeikyXSec404
 				reply(`[❕] Loading`)
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/simisimi?text=${body.slice(9)}&apikey=onlyonedeveloper`)
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/simisimi?text=${body.slice(9)}&apikey=${PremiumKey}`)
 				reply(anu.result.success)
 				break
 		case 'kodepos': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply(`kotanya mana bang?`)
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kodepos?kota=${body.slice(8)}&apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kodepos?kota=${body.slice(8)}&apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Provinsi:* : ${i.province}\n*City* : ${i.city}\n*Kecamatan* : ${i.subdistrict}\n*Kota* : ${i.urban}\n*Kode Pos* : ${i.postalcode}\n=================\n`
@@ -1349,7 +1739,7 @@ runtime = process.uptime()
 		case 'liputan6': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/liputan6?apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/liputan6?apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Title:* : ${i.title}\n*Link* : ${i.link}\n*Date* : ${i.isoDate}\n*Description* : ${i.description}\n=================\n`
@@ -1359,7 +1749,7 @@ runtime = process.uptime()
 		case 'cnnnews': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/cnnnews?apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/cnnnews?apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Title:* : ${i.title}\n*Link* : ${i.link}\n*Content* : ${i.contentSnippet}\n*Date* : ${i.isoDate}\n=================\n`
@@ -1369,7 +1759,7 @@ runtime = process.uptime()
 		case 'republika': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/republika?apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/republika?apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Creator:* : ${i.creator}\n*Title* : ${i.title}\n*Link* : ${i.link}\n*Categori* : ${i.categories}\n*Description* : ${i.description}\n*Date* : ${i.isoDate}\n=================\n`
@@ -1379,7 +1769,7 @@ runtime = process.uptime()
 		case 'temponews': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/temponews?apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/temponews?apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Title:* : ${i.title}\n*Link* : ${i.link}\n*Content* : ${i.content}\n*Date* : ${i.isoDate}\n=================\n`
@@ -1389,7 +1779,7 @@ runtime = process.uptime()
 		case 'kumparannews': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/kumpurannews?apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/kumpurannews?apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Creator:* : ${i.creator}\n*Title* : ${i.title}\n*Link* : ${i.link}\n*Categori* : ${i.categories}\n*Description* : ${i.description}\n*Date* : ${i.isoDate}\n=================\n`
@@ -1400,7 +1790,18 @@ runtime = process.uptime()
 				onlydev.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply(`mau nyari berita apaan bang?`)
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/lazymedia?search=${body.slice(10)}&apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/lazymedia?search=${body.slice(10)}&apikey=${PremiumKey}`)
+				teks = '=================\n'
+				for (let i of asu.hasil.result) {
+					teks += `*Author:* : ${i.author}\n*Title* : ${i.title}\n*Tag* : ${i.tag}\n*Time* : ${i.time}\n*Description* : ${i.desc}\n*Key* : ${i.key}\n=================\n`
+				}
+				reply(teks)
+				break
+		case 'infohoax': // Update By RzkyO & ItsmeikyXSec404	
+				onlydev.updatePresence(from, Presence.composing) 
+				if (args.length < 1) return reply(`mau nyari berita apaan bang?`)
+				reply(`[❕] Loading`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/news/turnbackhoax?page=${body.slice(9)}&apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.hasil.result) {
 					teks += `*Author:* : ${i.author}\n*Title* : ${i.title}\n*Tag* : ${i.tag}\n*Time* : ${i.time}\n*Description* : ${i.desc}\n*Key* : ${i.key}\n=================\n`
@@ -1411,7 +1812,7 @@ runtime = process.uptime()
 				onlydev.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply(`mau nyari resep makanan apaan bang?`)
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/resepmasakan?q=${body.slice(13)}&apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/resepmasakan?q=${body.slice(13)}&apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.hasil.results) {
 					teks += `*Title* : ${i.title}\n*Key* : ${i.key}\n*Time* : ${i.times}\n*Serving* : ${i.serving}\n*Difficulty* : ${i.difficulty}\n=================\n`
@@ -1422,7 +1823,7 @@ runtime = process.uptime()
 				onlydev.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply(`mau nyari game apaan bwang?`)
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/googleplay?q=${body.slice(10)}&apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/googleplay?q=${body.slice(10)}&apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.result.data.results) {
 					teks += `*Title* : ${i.title}\n*App ID* : ${i.appId}\n*Url* : ${i.url}\n*Developer* : ${i.developer}\n*Price Text* : ${i.priceText}\n*Price?* : ${i.price}\n*Free?* : ${i.free}\n*Summary?* : ${i.summary}\n*Score Text?* : ${i.scoreText}\n*Score?* : ${i.score}\n=================\n`
@@ -1433,10 +1834,32 @@ runtime = process.uptime()
 				onlydev.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply(`mau nyari apaan bwang di joox?`)
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/joox?q=${body.slice(5)}&apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/joox?q=${body.slice(5)}&apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.result.data) {
 					teks += `*Title* : ${i.lagu}\n*Album* : ${i.album}\n*Penyanyi* : ${i.penyanyi}\n*Publish Date* : ${i.publish}\n=================\n`
+				}
+				reply(teks)
+				break
+		 case 'rexdlsearch': // Update By RzkyO & ItsmeikyXSec404	
+				onlydev.updatePresence(from, Presence.composing) 
+				if (args.length < 1) return reply(`mau nyari apaan bwang di joox?`)
+				reply(`[❕] Loading`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/rexdl/search?q=${body.slice(12)}&apikey=${PremiumKey}`)
+				teks = '=================\n'
+				for (let i of asu.result) {
+					teks += `*Title* : ${i.title}\n*Image* : ${i.thumb}\n*Url* : ${i.url}\n*Url Download* : ${i.url_download}\n*Desk* : ${i.desc}\n=================\n`
+				}
+				reply(teks)
+				break
+		  case 'rexdlget': // Update By RzkyO & ItsmeikyXSec404	
+				onlydev.updatePresence(from, Presence.composing) 
+				if (args.length < 1) return reply(`mau nyari apaan bwang di joox?`)
+				reply(`[❕] Loading`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/rexdl/get?url=${body.slice(9)}&apikey=${PremiumKey}`)
+				teks = '=================\n'
+				for (let i of asu.result.downllad) {
+					teks += `*Title* : ${i.title}\n*Url* : ${i.url}\n=================\n`
 				}
 				reply(teks)
 				break
@@ -1444,7 +1867,7 @@ runtime = process.uptime()
 				onlydev.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply(`mau nyari apaan bwang di joox?`)
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/infofilm?q=${body.slice(10)}&apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/infofilm?q=${body.slice(10)}&apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.hasil.result) {
 					teks += `*Title* : ${i.title}\n*Rating* : ${i.rating}\n*Episode* : ${i.episode}\n*Movie ID* : ${i.movieId}\n*Views* : ${i.detail.views}\n*Duration* : ${i.detail.duration}\n*Release* : ${i.detail.release}\n*Dscription* : ${i.detail.description}\n=================\n`
@@ -1455,7 +1878,7 @@ runtime = process.uptime()
 				onlydev.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply(`mau nyari apaan bwang di joox?`)
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/country/infofilm?search=${body.slice(11)}&apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/country/infofilm?search=${body.slice(11)}&apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.hasil.result) {
 					teks += `*Title* : ${i.title}\n*Rating* : ${i.rating}\n*Quality* : ${i.quality}\n*Movie ID* : ${i.movieId}\n*Trailer* : ${i.detail.trailer}\n*Views* : ${i.detail.views}\n*Genre* : ${i.detail.genre}\n*Director* : ${i.detail.director}\n*Aktor* : ${i.detail.actors}\n*Country* : ${i.detail.country}\n*Duration* : ${i.detail.duration}\n*Release* : ${i.detail.release}\n*Description* : ${i.detail.description}\n=================\n`
@@ -1464,9 +1887,9 @@ runtime = process.uptime()
 				break
 		case 'lk21': // Update By RzkyO & ItsmeikyXSec404	
 				onlydev.updatePresence(from, Presence.composing) 
-				if (args.length < 1) return reply(`mau nyari apaan bwang di joox?`)
+				if (args.length < 1) return reply(`mau nyari apaan bwang di lk21?`)
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/lk21?query=${body.slice(5)}&apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/lk21?query=${body.slice(5)}&apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.hasil.result) {
 					teks += `*Title* : ${i.title}\n*Genre* : ${i.genre}\n*Rating* : ${i.rating}\n*Duration* : ${i.duration}\n*Quality* : ${i.quality}\n*Trailer* : ${i.trailer}\n*Watch* : ${i.watch}\n=================\n`
@@ -1477,7 +1900,7 @@ runtime = process.uptime()
 				onlydev.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply(`mau nyari apaan bwang di yt?`)
 				reply(`[❕] Loading`)
-				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/ytsearch?q=${body.slice(9)}&apikey=onlyonedeveloper`)
+				asu = await fetchJson(`https://onlydevcity.herokuapp.com/api/ytsearch?q=${body.slice(9)}&apikey=${PremiumKey}`)
 				teks = '=================\n'
 				for (let i of asu.hasil.results) {
 					teks += `*Title:* : ${i.video.title}\n*Url* : ${i.video.url}\n*Duration* : ${i.video.duration}\n*Description* : ${i.video.description}\n*Published* : ${i.video.published}\n*Views* : ${i.video.views}\n=================\n`
@@ -1486,7 +1909,7 @@ runtime = process.uptime()
 				break
 		case 'kbbi':			
 				if (args.length < 1) return reply('Apa yang mau dicari di kbbi kak?')
-				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kbbi?kata=${body.slice(6)}&apikey=onlyonedeveloper`, {method: 'get'})
+				anu = await fetchJson(`https://onlydevcity.herokuapp.com/api/kbbi?kata=${body.slice(6)}&apikey=${PremiumKey}`, {method: 'get'})
 				reply('Menurut Kbbi:\n\n'+anu.result.arti)
 				break
 				case 'runtime':
@@ -1968,6 +2391,11 @@ runtime = process.uptime()
 }
 starts()
 //SC BY MHANKBARBAR
-//FREE WEB API BY ITSMEIKYXSEC404
+//WEB API BY ITSMEIKYXSEC404
 //RECODE BY ITSMEIKYXSEC404 & RIZKYO
 //CUMAN RECODE BANG
+//APIKEY ? BELI SENDIRI YA :P
+//EDT APIKEY ? DI /src/settings.json
+//EDT OWNER NUMBER ? DI /src/settings.json
+//EDT PREFIX BOT ? DI /src/settings.json
+// BELI DI WEB : https://onlydevcity.herokuapp.com/price
