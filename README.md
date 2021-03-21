@@ -1,4 +1,4 @@
-<h1 align="center">そのメイキー <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="40px" alt="hi"><br>SELFBOT ONLYDEV CITY!</h1>
+<h1 align="center">そのメイキー <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="40px" alt="hi"><br>VIRTEX BOT WA ODC !</h1>
 
 <p align="center">
 <img src="https://i.ibb.co/ygjP0N0/b26c92fe495c.jpg" width="100%" alt="API Giphy logo"/>
@@ -8,51 +8,55 @@
 
 - 👀 I m currently focusing on **JavaScript**.
 
-- 📝 I m currently working on [`ShozukaAPIs`](https://api.shizukaa.xyz/) 
+- 📝 I m currently working on [`ShizukaAPIs`](https://api.shizukaa.xyz/) 
 
-<p align="center">
-  <img src="https://img.shields.io/badge/-JavaScript-black?style=flat-square&logo=javascript" />
-  <img src="https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=Node.js" />
-  <img src="https://img.shields.io/badge/-HTML5-black?style=flat-square&logo=html5&logoColor=e34f26" />
-  <img src="https://img.shields.io/badge/-CSS3-black?style=flat-square&logo=css3&logoColor=1572b6" />
-  <img src="https://img.shields.io/badge/-Git-black?style=flat-square&logo=git" />
-  <img src="https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github" /> <br>
-  <img src="https://img.shields.io/badge/-Python-black?style=flat-square&logo=python" />
-  <img src="https://img.shields.io/badge/-React-black?style=flat-square&logo=react" />
-  <img src="https://img.shields.io/badge/-Redux-black?style=flat-square&logo=redux" />
-  <img src="https://img.shields.io/badge/-Windows-black?style=flat-square&logo=windows" />
-  <img src="https://img.shields.io/badge/-VS_Code-black?style=flat-square&logo=visual-studio-code" />
-  <img src="https://img.shields.io/badge/-SQLite3-black?style=flat-square&logo=sqlite" />
-</p>
+## Requirement
 
-<p align="center">
-  <a href="https://github.com/ItsmeikyXSec4O4"><img src="https://github-readme-stats.vercel.app/api?username=ItsmeikyXSec4O4&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&icon_color=fff&hide_border=true&show_icons=true" /></a>
-</p>
+This repo require a [NodeJS](https://nodejs.org/) >= 11.15.0.
 
-<p align="center">
-  <a href="https://github.com/ItsmeikyXSec4O4"><img src="https://github-readme-stats.vercel.app/api/top-langs?username=ItsmeikyXSec4O4&bg_color=30,e96443,904e95&title_color=fff&text_color=fff&hide_border=true&show_icons=true&layout=compact" /></a>
-</p>
+APIKEY [OnlyDevCity](https://wa.me/6281285627596)
 
-<p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=ItsmeikyXSec4O4&theme=onedark" /></a>
-</p>
+## Termux Installation
 
-<p align="center">
-   <img src="https://github-readme-streak-stats.herokuapp.com/?user=ItsmeikyXSec4O4" />
-</p>
+First of all, you need to install [Git](https://git-scm.com/download/win) & [NodeJS](https://nodejs.org/). Then open your git bash, and follow this:<br>
+```sh
+$ termux-setup-storage
+$ pkg install update && pkg install upgrade
+$ pkg install ffmpeg && pkg install bash && pkg install nodejs
+$ git clone https://github.com/ItsmeikyXSec4O4/SelfBotOdc/
+$ cd VIRTEX-BOT-WA-ODC
+$ ls
+$ bash install.sh
+$ node index.js
 
-<p align="center">
-  <a href="https://youtu.be/WgeItwiifYs"><img src="https://img.shields.io/badge/YouTube-ItsmeikyXSec404-ff0000?style=for-the-badge&logo=youtube&logoColor=ff0000&link=https://youtu.be/WgeItwiifYs" /></a>
-  <a name=hendra759&label=VIEWS&style=flat-square&color=orange" />
+Tinggal Scan Dah :)
 
-</p> 
- #sosial media
+Cara Memanggil Nya Yaitu Dengan Ketik zhelp
+```
+
+## How to run
+
+```sh
+$ node index.js
+```
+or<br>
+```sh
+$ npm start
+```
+
+## PERATURAN!!
+
+Ini Adalah Script Selfbot Jadi Hanya Untuk Owner Saja
+Yang Bisa Akses Pada Menu Yang Ada Di Dalam Menu SelfBot 
+
+◪ S&K !!
+- ❏ Ganti Api Key Di Bagian lib/settings.json
+- ❏ Dilarang Mengganti Nama Author / Team 
+- ❏ Jika Ada Error Silahkan Hubungi Pembuat / Author Script Ini
+- ❏ Sengaja Index Nya Saya Hash Karena Banyak Yang Ganti Nama Team :)
+- ❏ Buy Api Key? Silahkan Kunjungin Web https://onlydevcity.herokuapp.com/
 
 
-* [`WhatsApp Admin `](https://wa.me/6281281872699)
+## Keyword
 
-* [`OnlyDev City Res APIs `](https://onlydevcity.herokuapp.com/)
-
-* [`Website BOT`](https://shizukaa.xyz)
-
-
+Type `zcreator` to see the creator
