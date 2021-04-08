@@ -1,5 +1,5 @@
 {
-  "name": "Self-BOT OnlyDev",
+  "name": "HINATA",
   "version": "0.0.2",
   "description": "No comment",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "ITSMEIKYXSEC404",
+  "author": "NARUTO",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/baileys": "^3.4.1",
